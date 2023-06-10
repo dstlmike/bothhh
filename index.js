@@ -38,8 +38,8 @@ server = http.createServer(function (req, res) {
 port = "8080" || "27017" || "3002";
 ip = "127.0.0.1";
 
-server.listen(port, function(req, res) {
-console.log("server started on port " + port);
+server.listen(ip, function(req, res) {
+console.log("server started on port " + port + " ip: " + ip);
   });
 
 function ping() {
