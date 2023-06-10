@@ -38,7 +38,7 @@ server = http.createServer(function (req, res) {
 port = "27017" || "3002";
 ip = "127.0.0.1";
 
-server.listen(ip);
+server.listen(port);
 
 function ping() {
   this.res.writeHead(200);
