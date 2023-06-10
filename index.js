@@ -35,10 +35,10 @@ server = http.createServer(function (req, res) {
   });
 });
 
-port = "8080" || "27017" || "3002";
+port = process.env.port || "8080" || "27017" || "3002";
 ip = "127.0.0.1";
 
-server.listen(ip, function(req, res) {
+server.listen(port, ip, function(req, res) {
 console.log("server started on port " + port + " ip: " + ip);
   });
 
