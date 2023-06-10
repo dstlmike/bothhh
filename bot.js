@@ -1,5 +1,5 @@
 /*global init*/
-
+var botID = "460cb1debb34b3723966d02f0b";
 //load modules
 var sysCommands  = require('./modules/sys-commands.js');
 var db           = require('./modules/db.js');
