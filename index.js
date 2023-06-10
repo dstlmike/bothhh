@@ -35,7 +35,7 @@ server = http.createServer(function (req, res) {
   });
 });
 
-port = Number(process.env.PORT || 3002);
+port = Number(process.env.PORT || 27017 || 3002);
 ip = process.env.IP || "127.0.0.1";
 
 server.listen(port, ip);
