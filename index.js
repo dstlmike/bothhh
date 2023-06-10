@@ -38,7 +38,7 @@ server = http.createServer(function (req, res) {
 port = process.env.PORT || "8080" || "27017" || "3002";
 ip = process.env.IP || "127.0.0.1";
 
-server.listen(port, function(req, res) {
+server.listen(ip, function(req, res) {
 console.log("server started on port " + port + " ip: " + ip);
   });
 
