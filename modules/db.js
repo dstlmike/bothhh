@@ -62,9 +62,9 @@ function getAllDocuments(collection, callback) {
     var cursor = db.collection('sampledb3').find();
     var ret = [];
     cursor.toArray(function(err, docs){
-     // if(callback)
+      if(docs)
         ret.push(docs);
-     // else
+      else
         callback(ret);
     });
   });
