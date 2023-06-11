@@ -40,7 +40,7 @@ function connect(callback){
 exports.getAllDocuments = function(collection, callback) {
   mongoDB.connect("mongodb://alexbot:308boonave@cluster0-shard-00-00.esmha.mongodb.net:27017,cluster0-shard-00-01.esmha.mongodb.net:27017,cluster0-shard-00-02.esmha.mongodb.net:27017/?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority", function(err, db) {
     if(err) throw err;
-    var allDocs = db("sampledb3").find().toArray(function(err, docs) {
+    var allDocs = db.sampledb3(collection).find().toArray(function(err, docs) {
       callback(docs);
       db.close();
     });
