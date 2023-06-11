@@ -62,7 +62,7 @@ function getAllDocuments(collection, callback) {
     var cursor = db.collection(collection).find();
     var ret = [];
     cursor.toArray(function(err, docs){
-      if(doc != null)
+      if(callback)
         ret.push(docs);
       else
         callback(ret);
