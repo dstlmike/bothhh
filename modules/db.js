@@ -65,7 +65,7 @@ function getAllDocuments(collection, callback) {
    // var sampledb3 = [];
 
    // var allDocs = 
-        db.collection({"sampledb3"}).find().toArray(function(err, docs) {
+        db.collection('sampledb3').find().toArray(function(err, docs) {
 //allDocs;
       callback(docs);
 
