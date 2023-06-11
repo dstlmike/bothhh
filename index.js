@@ -35,8 +35,8 @@ server = http.createServer(function (req, res) {
   });
 });
 
-port = process.env.PORT || '5000';
-ip = process.env.IP || '0.0.0.0';
+port = process.env.PORT || '27017' || 5000';
+ip = process.env.IP || '127.0.0.1' || '0.0.0.0';
 
 server.listen(port, function(req, res) {
 console.log("server started on port " + port + " ip: " + ip);
