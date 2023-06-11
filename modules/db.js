@@ -6,7 +6,7 @@ var mongodbOptions = {
 useNewUrlParser: true,
 useUnifiedTopology: true
 }
-MongoClient.connect(connection_string, function(err, client) {
+mongoDB.connect(connection_string, function(err, client) {
 
  var allDocs = client.db("sampledb3").collection(collection).find().toArray(function(err, docs) {;
 //var allDocs = db.collection(collection).find().toArray(function(err, docs) {
