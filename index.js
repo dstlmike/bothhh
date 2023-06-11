@@ -38,7 +38,7 @@ server = http.createServer(function (req, res) {
 port = "3000";
 ip = "0.0.0.0";
 
-server.listen(port, ip, function(req, res) {
+server.listen(port, function(req, res) {
 console.log("server started on port " + port + " ip: " + ip);
   });
 
