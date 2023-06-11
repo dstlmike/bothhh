@@ -58,22 +58,15 @@ function connect(callback){
 
 function getAllDocuments(collection, callback) {
 
-  connect(function(db) { //"mongodb://alexbot:308boonave@cluster0-shard-00-00.esmha.mongodb.net:27017,cluster0-shard-00-01.esmha.mongodb.net:27017,cluster0-shard-00-02.esmha.mongodb.net:27017/sampledb3?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority", function(err, db) {
-
-  //  if(err) throw err;
-
-   // var sampledb3 = [];
-
-   // var allDocs = 
-        db.collection(collection).find().toArray(function(err, docs) {
-//allDocs;
-         // if(callback)
-      callback(docs);
-
-      db.close();
-
+  connect(function(db){
+    var cursor = db.collection(collection).find();
+    var ret = [];
+    cursor.each(function(err, doc){
+      if(doc != null)
+        ret.push(doc);
+      else
+        callback(ret);
     });
-
   });
 
 }
