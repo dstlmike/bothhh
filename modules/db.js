@@ -13,7 +13,7 @@ mongoDB.connect(connection_string, function(err, collection, client) {
 
       callback(docs);
 
-      db.close();
+   //   db.close();
 
     });
   // perform actions on the collection object
