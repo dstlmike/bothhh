@@ -8,8 +8,14 @@ useUnifiedTopology: true
 }
 MongoClient.connect(connection_string, function(err, client) {
 
-  const collection = client.db("test").collection("devices");
+ var allDocs = client.db("sampledb3").collection(collection).find().toArray(function(err, docs) {;
+//var allDocs = db.collection(collection).find().toArray(function(err, docs) {
 
+      callback(docs);
+
+      db.close();
+
+    });
   // perform actions on the collection object
 
   client.close();
