@@ -35,10 +35,10 @@ server = http.createServer(function (req, res) {
   });
 });
 
-port = "3000";
-ip = "0.0.0.0";
+port = process.env.PORT || '5000';
+ip = process.env.IP || '127.0.0.1' || '0.0.0.0';
 
-server.listen(port, function(req, res) {
+server.listen(port, ip, function(req, res) {
 console.log("server started on port " + port + " ip: " + ip);
   });
 //
