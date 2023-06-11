@@ -41,7 +41,7 @@ ip = "0.0.0.0";
 server.listen(port, function(req, res) {
 console.log("server started on port " + port + " ip: " + ip);
   });
-
+//
 function ping() {
   this.res.writeHead(200);
   this.res.end("I am a robot.");
