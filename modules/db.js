@@ -6,6 +6,8 @@ var mongodbOptions = {
 useNewUrlParser: true,
 useUnifiedTopology: true
 }
+getAllDocuments();
+/*
 mongoDB.connect(connection_string, function(err, client) {
 
   client.db("sampledb3").find().toArray(function(err, docs) {
@@ -21,6 +23,7 @@ mongoDB.connect(connection_string, function(err, client) {
   client.close();
 
 });
+*/
 //
 //if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD){
   //connection_string = 'mongodb://' + process.env.OPENSHIFT_MONGODB_DB_USERNAME + ":" +
