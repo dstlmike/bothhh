@@ -59,7 +59,7 @@ function connect(callback){
 function getAllDocuments(collection, callback) {
 
   connect(function(db){
-    var cursor = db.collection(collection).find();
+    var cursor = db.collection('sampledb3').find();
     var ret = [];
     cursor.toArray(function(err, docs){
       if(callback)
