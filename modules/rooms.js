@@ -39,10 +39,10 @@ exports.getRoom = function(path) {
   var room = {};
   path = path.toLowerCase();
 
-//  if (rooms[path]) {
+  if (rooms[path]) {
     room.type = path;
     room.id = '460cb1debb34b3723966d02f0b'; //rooms[path];
-//  }
+  }
 
   return room;
 }
@@ -71,7 +71,7 @@ function cmdRoomAdd(request, currentBot, owner, callback) {
 
   if (regex.test(reqText)){
     var val = regex.exec(reqText);
-    console.log(owner.id);
+  //  console.log(owner.id);
     if (request.user_id != owner.id || currentBot.type != 'config')
       return true;
 
