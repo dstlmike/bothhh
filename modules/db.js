@@ -6,6 +6,15 @@ var mongodbOptions = {
 useNewUrlParser: true,
 useUnifiedTopology: true
 }
+MongoClient.connect(connection_string, function(err, client) {
+
+  const collection = client.db("test").collection("devices");
+
+  // perform actions on the collection object
+
+  client.close();
+
+});
 //
 //if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD){
   //connection_string = 'mongodb://' + process.env.OPENSHIFT_MONGODB_DB_USERNAME + ":" +
