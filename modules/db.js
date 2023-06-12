@@ -47,7 +47,7 @@ console.log(results);
 
     // query for movies that have a runtime less than 15 minutes
 
-    const query = { name: 1 };
+    const query = {};
 
     const options = {
 
