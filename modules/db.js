@@ -14,7 +14,7 @@ connect(function(err, db) {
 
   var dbo = db.db("sampledb");
 
-  db.collection("config").find().toArray(function(err, result) {
+  db.db().find().toArray(function(err, result) {
 
    // if (err) throw err;
 
