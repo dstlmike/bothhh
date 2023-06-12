@@ -12,12 +12,12 @@ mongoDB.connect("mongodb://boonbot:boonbot@cluster0-shard-00-00.esmha.mongodb.ne
 //rooms = {};
 // if (err) throw err
 
-//  var dbo = db.db("rooms");
+  var dbo = db.db("rooms");
 
   dbo().find({"name": 1}).toArray(function(err, result) {
    // if (err) throw err;
 //callback(docs);
-    console.log('Results!!! ' + result[0].name);
+    console.log('Results!!! ' + db);
 
   //  db.close();
 
