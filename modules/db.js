@@ -38,10 +38,10 @@ var ret = [];
 console.log(results);
 });
 */
-  async function run() {
+//  async function run() {
 //MongoClient.connect(uri, function(err, client) {
 
-  try {
+//  try {
 
     var database = client.db("sampledb");
 
@@ -49,22 +49,24 @@ console.log(results);
 
     // query for movies that have a runtime less than 15 minutes
 
-    const query = {config: "owner"};
+ //   const query = {config: "owner"};
 
-    const options = {
+//    const options = {
 
       // sort returned documents in ascending order by title (A->Z)
 
-      sort: { config: 1 },
+  //    sort: { config: 1 },
 
       // Include only the `title` and `imdb` fields in each returned document
 
-      projection: { _id: 0, config: 1 },
+ //     projection: { _id: 0, config: 1 },
 
-    };
+ //   };
 
     var cursor = movies.find({'config': 1});
-
+cursor.each(function(err, results) {
+console.log(results);
+  });
     // print a message if no documents were found
 
 //    if ((await movies.countDocuments(query)) === 0) {
@@ -73,21 +75,21 @@ console.log(results);
 
  //   }
 
-    for await (const doc of cursor) {
+   // for await (const doc of cursor) {
 
-      console.log(doc);
+  //    console.log(doc);
 
-    }
+  //  }
 
-  } finally {
+//  } finally {
 
-    await client.close();
+  //  await client.close();
 
-  }
+//  }
 //});
-}
+//}
 
-run().catch(console.log);
+//run().catch(console.log);
 });
 
 
