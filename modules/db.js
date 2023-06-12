@@ -39,6 +39,67 @@ console.log(results);
 
 });
 
+
+//import { MongoClient } from "mongodb";
+
+// Replace the uri string with your MongoDB deployment's connection string.
+
+//const uri = "<connection string uri>";
+
+const client = new MongoClient(uri);
+
+async function run() {
+
+  try {
+
+    const database = client.db("sampledb");
+
+    const movies = database.collection("config");
+
+    // query for movies that have a runtime less than 15 minutes
+
+    const query = { name: 1 };
+
+    const options = {
+
+      // sort returned documents in ascending order by title (A->Z)
+
+      sort: { name: 1 },
+
+      // Include only the `title` and `imdb` fields in each returned document
+
+      projection: { _id: 0, name: 1 },
+
+    };
+
+    const cursor = movies.find(query, options);
+
+    // print a message if no documents were found
+
+    if ((await movies.countDocuments(query)) === 0) {
+
+      console.log("No documents found!");
+
+    }
+
+    for await (const doc of cursor) {
+
+      console.dir(doc);
+
+    }
+
+  } finally {
+
+    await client.close();
+
+  }
+
+}
+
+run().catch(console.dir);
+
+
+
 //
 /*const {MongoClient} = require('mongodb');
 main().catch(console.error);
