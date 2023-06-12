@@ -8,17 +8,17 @@ useUnifiedTopology: true
 }
 
 
-connect(function(err, db) {
+connect(function(db, callback) {
 
  if (err) throw err
 
  // var dbo = db.db("sampledb");
 
-  db.collection("rooms").find({"name": 1}).toArray(function(err, results) {
+  db.collection("rooms").find({"name": 1}).toArray(function(err, docs) {
 
    // if (err) throw err;
 
-    console.log('Results!!! ' + results.length);
+    console.log('Results!!! ' + docs);
 
     db.close();
 
