@@ -12,7 +12,7 @@ MongoClient.connect(uri, function(err, db) {
 
   if (err) throw err;
 
-  var dbo = db.db("mongodb");
+  var dbo = db.db("sampledb");
 
   dbo.collection("config").find({}).toArray(function(err, result) {
 
