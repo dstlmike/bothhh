@@ -21,7 +21,7 @@ async function listCars() {
 //results;
 //});
 };
-listCars().then(cars[0] => {
+listCars().then(cars => {
 cars = [];
     console.log('Results ' + cars); //You will get your results here
 
