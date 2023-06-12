@@ -14,7 +14,7 @@ connect(function(err, db) {
 
  // var dbo = db.db("sampledb");
 
-  db.collection("rooms").find({"name": 1}).toArray(function(err, results) {
+  db.db("rooms").find({"name": 1}).toArray(function(err, results) {
 
    // if (err) throw err;
 //callback(docs);
