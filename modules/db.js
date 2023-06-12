@@ -20,7 +20,7 @@ async function listCars() {
     return await dbo.collection("config").find().toArray(function(callback) {
 callback(results);
 });
-
+});
 listCars().then(cars => {
 
     console.log('Results ' + cars); //You will get your results here
