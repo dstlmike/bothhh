@@ -6,12 +6,12 @@ var mongodbOptions = {
 useNewUrlParser: true,
 useUnifiedTopology: true
 }
-
+var client = new MongoClient(uri);
 var MongoClient = require('mongodb').MongoClient;
 
 var uri = "mongodb://boonbot:boonbot@cluster0-shard-00-00.esmha.mongodb.net:27017,cluster0-shard-00-01.esmha.mongodb.net:27017,cluster0-shard-00-02.esmha.mongodb.net:27017/?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority";
 
-MongoClient.connect(uri, function(err, client) {
+//MongoClient.connect(uri, function(err, client) {
 /*
   const cursor = client.db("sampledb").collection("config").find();
 //collection.find().each(function(err, results) {
@@ -41,9 +41,9 @@ console.log(results);
 
   try {
 
-    const database = client.db("sampledb");
+    var database = client.db("sampledb");
 
-    const movies = database.collection("config");
+    var movies = database.collection("config");
 
     // query for movies that have a runtime less than 15 minutes
 
@@ -61,7 +61,7 @@ console.log(results);
 
     };
 
-    const cursor = movies.find('config': 'owner');
+    var cursor = movies.find({'config': 1});
 
     // print a message if no documents were found
 
@@ -86,7 +86,7 @@ console.log(results);
 }
 
 run().catch(console.dir);
-});
+//});
 
 
 //import { MongoClient } from "mongodb";
