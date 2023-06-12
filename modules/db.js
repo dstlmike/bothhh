@@ -15,7 +15,7 @@ MongoClient.connect(uri, function(err, client) {
 
   const collection = client.db("sampledb").collection("config");
 collection.find().each(function(err, results) {
-
+results = [];
       console.log(results);
 
     //  db.close();
