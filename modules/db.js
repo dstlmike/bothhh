@@ -11,12 +11,24 @@ var MongoClient = require('mongodb').MongoClient;
 
 var uri = "mongodb://boonbot:boonbot@cluster0-shard-00-00.esmha.mongodb.net:27017,cluster0-shard-00-01.esmha.mongodb.net:27017,cluster0-shard-00-02.esmha.mongodb.net:27017/?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority";
 
-MongoClient.connect(uri, function(err, client) {
+MongoClient.connect(uri, function(err, client, callback) {
 
-  const collection = client.db("sampledb").collection("config");
-collection.find().each(function(err, results) {
-results = [];
-      console.log(results);
+  const cursor = client.db("sampledb").collection("config").find({});
+//collection.find().each(function(err, results) {
+var ret = [];
+
+    cursor.each(function(err, results){
+
+      //if(doc != null)
+
+        //ret.push(doc);
+
+      //else
+
+        callback(ret);
+  
+  //results = [];
+      console.log(ret);
 
     //  db.close();
   // perform actions on the collection object
