@@ -17,8 +17,8 @@ async function listCars() {
 
     let dbo = db.db("sampledb");
 
-    return await dbo.collection("config").find({}).toArray()
-
+    return await dbo.collection("config").find().toArray(function(callback, results) {
+callback(results);
 }
 
 listCars().then(cars => {
