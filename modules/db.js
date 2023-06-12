@@ -61,7 +61,7 @@ console.log(results);
 
     };
 
-    const cursor = movies.find({"config"}, options);
+    const cursor = movies.find({config}, options);
 
     // print a message if no documents were found
 
