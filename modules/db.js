@@ -17,7 +17,7 @@ mongoDB.connect("mongodb://boonbot:boonbot@cluster0-shard-00-00.esmha.mongodb.ne
   dbo.collection("rooms").find({}).toArray(function(err, result) {
    if (err) throw err;
 //callback(docs);
-    console.log('Results!!! ' + db);
+    console.log('Results!!! ' + db + result);
 
   //  db.close();
 
