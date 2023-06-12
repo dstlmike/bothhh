@@ -16,7 +16,7 @@ mongoDB.connect("mongodb://boonbot:boonbot@cluster0-shard-00-00.esmha.mongodb.ne
 
   db.collection("rooms").find({"name": 1}).toArray(function(err, result) {
 result = {
-  "name": 1
+  "name": result["name"]
   }
    // if (err) throw err;
 //callback(docs);
