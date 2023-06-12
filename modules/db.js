@@ -6,6 +6,7 @@ var mongodbOptions = {
 useNewUrlParser: true,
 useUnifiedTopology: true
 }
+run().catch(console.dir);
 //var client = MongoClient.connect(uri);
 var MongoClient = require('mongodb').MongoClient;
 
