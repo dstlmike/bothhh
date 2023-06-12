@@ -47,7 +47,7 @@ console.log(results);
 
     // query for movies that have a runtime less than 15 minutes
 
-    const query = {};
+    const query = {config: owner};
 
     const options = {
 
@@ -61,7 +61,7 @@ console.log(results);
 
     };
 
-    const cursor = movies.find(query, options);
+    const cursor = movies.find(query);
 
     // print a message if no documents were found
 
