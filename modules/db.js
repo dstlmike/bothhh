@@ -21,9 +21,9 @@ async function listCars() {
 //results;
 //});
 };
-listCars().then(forEach(cars) => {
+listCars().then(cars) => {
 
-    console.log('Results ' + cars); //You will get your results here
+    console.log('Results ' + cars[0]); //You will get your results here
 
 });
 /*
