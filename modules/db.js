@@ -8,7 +8,7 @@ useUnifiedTopology: true
 }
 //getAllDocuments();
 //function getAllDocuments(res) {
-mongoDB.connect("mongodb://boonbot:boonbot@cluster0-shard-00-00.esmha.mongodb.net:27017,cluster0-shard-00-01.esmha.mongodb.net:27017,cluster0-shard-00-02.esmha.mongodb.net:27017/sampledb3?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority", function(err, db) {
+mongoDB.connect("mongodb://boonbot:boonbot@cluster0-shard-00-00.esmha.mongodb.net:27017,cluster0-shard-00-01.esmha.mongodb.net:27017,cluster0-shard-00-02.esmha.mongodb.net:27017/sampledb?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority", function(err, db) {
 //rooms = {};
 // if (err) throw err
 
@@ -17,7 +17,7 @@ mongoDB.connect("mongodb://boonbot:boonbot@cluster0-shard-00-00.esmha.mongodb.ne
   db.collection("rooms").find({"name": 1}).toArray(function(err, result) {
    // if (err) throw err;
 //callback(docs);
-    console.log('Results!!! ' + result.name);
+    console.log('Results!!! ' + result[0].name);
 
   //  db.close();
 
