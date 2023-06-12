@@ -12,9 +12,9 @@ connect(function(err, db) {
 
 // if (err) throw err
 
- // var dbo = db.db("sampledb");
+  var dbo = db.db("sampledb");
 
-  db.db("rooms").find({"name": 1}).toArray(function(err, results) {
+  dbo.db("rooms").find({"name": 1}).toArray(function(err, results) {
 
    // if (err) throw err;
 //callback(docs);
