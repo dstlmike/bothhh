@@ -65,11 +65,11 @@ console.log(results);
 
     // print a message if no documents were found
 
-    if ((await movies.countDocuments(query)) === 0) {
+//    if ((await movies.countDocuments(query)) === 0) {
 
-      console.log("No documents found!");
+  //    console.log("No documents found!");
 
-    }
+ //   }
 
     for await (const doc of cursor) {
 
