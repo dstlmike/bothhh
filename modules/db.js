@@ -10,7 +10,7 @@ useUnifiedTopology: true
 
 connect(function(err, db) {
 
-  if (err) throw err;
+//  if (err) throw err;
 
   var dbo = db.db("sampledb");
 
@@ -18,7 +18,7 @@ connect(function(err, db) {
 
    // if (err) throw err;
 
-    console.log(result);
+    console.log('Results!!! ' + result);
 
     db.close();
 
