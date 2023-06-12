@@ -17,7 +17,7 @@ async function listCars() {
 
     let dbo = db.db("sampledb");
 
-    return await dbo.collection("config").find({"config": 1});
+    return await dbo.collection("config").find({"config": 1}).toArray();
 //results;
 //});
 };
@@ -26,7 +26,7 @@ cars = {
     name: cars.config,
     id: cars.id,
     }
-    console.log('Results ' + cars.toString()); //You will get your results here
+    console.log('Results ' + {$cars.length}); //You will get your results here
 
 });
 /*
