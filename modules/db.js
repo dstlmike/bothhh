@@ -18,10 +18,10 @@ connect(function(db) {
 
    // if (err) throw err;
 //callback(docs);
-    console.log('Results!!! ' + result);
+    
 
     db.close();
-
+console.log('Results!!! ' + result);
   });
 
 });
