@@ -14,7 +14,7 @@ connect(function(err, db) {
 
   var dbo = db.db("sampledb");
 
-  dbo.collection("config").find({"config": 1}).toArray(function(err, result) {
+  dbo.collection("config").find({}).toArray(function(err, result) {
 
     if (err) throw err;
 
@@ -25,7 +25,7 @@ connect(function(err, db) {
   });
 
 });
-
+/**
 
 //run().catch(console.dir);
 //var client = MongoClient.connect(uri);
@@ -46,6 +46,7 @@ listCars().then(cars => {
     console.log('Results ${cars.length}'); //You will get your results here
 
 });
+**/
 /*
 MongoClient.connect(uri, function(err, client) {
 /*
