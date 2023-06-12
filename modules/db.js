@@ -22,7 +22,7 @@ async function listCars() {
 //});
 };
 listCars().then(cars => {
-cars = {};
+
     console.log('Results ' + cars.config); //You will get your results here
 
 });
