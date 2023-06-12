@@ -12,7 +12,7 @@ mongoDB.connect("mongodb://boonbot:boonbot@cluster0-shard-00-00.esmha.mongodb.ne
 
 // if (err) throw err
 
-  var dbo = db.db("sampledb3");
+  var dbo = db.collection("sampledb3");
 
   dbo.collection("rooms").find({"name": 1}).toArray(function(err, result) {
 
