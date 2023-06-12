@@ -17,7 +17,7 @@ async function listCars() {
 
     let dbo = db.db("sampledb");
 
-    return await dbo.collection("config").find({"config": 1);
+    return await dbo.collection("config").find({"config": 1});
 //results;
 //});
 };
