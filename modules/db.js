@@ -53,15 +53,15 @@ console.log(results);
 
       // sort returned documents in ascending order by title (A->Z)
 
-      sort: { name: 1 },
+      sort: { config: 1 },
 
       // Include only the `title` and `imdb` fields in each returned document
 
-      projection: { _id: 0, name: 1 },
+      projection: { _id: 0, config: 1 },
 
     };
 
-    const cursor = movies.find();
+    const cursor = movies.find({"config"}, options);
 
     // print a message if no documents were found
 
