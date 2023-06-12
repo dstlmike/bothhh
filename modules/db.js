@@ -25,7 +25,7 @@ collection.find().toArray(function(err, results) {
 
 });
 
-
+});
 
 //
 /*const {MongoClient} = require('mongodb');
