@@ -13,7 +13,7 @@ var uri = "mongodb://boonbot:boonbot@cluster0-shard-00-00.esmha.mongodb.net:2701
 
 MongoClient.connect(uri, function(err, client) {
 
-  const cursor = client.db("sampledb").collection("config").find({});
+  const cursor = client.db("sampledb").collection("config").find();
 //collection.find().each(function(err, results) {
 var ret = [];
 
@@ -28,13 +28,13 @@ var ret = [];
         //callback(ret);
   
   //results = [];
-      console.log(results);
+    //  console.log(results);
 
     //  db.close();
   // perform actions on the collection object
 
   client.close();
-
+console.log(results);
 });
 
 });
