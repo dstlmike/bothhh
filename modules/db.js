@@ -61,7 +61,7 @@ console.log(results);
 
     };
 
-    const cursor = movies.find({'config': 'owner'}, options);
+    const cursor = movies.find('config': 'owner');
 
     // print a message if no documents were found
 
