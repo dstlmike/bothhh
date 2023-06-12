@@ -12,7 +12,7 @@ connect(function(err, db) {
 
  if (err) throw err;
 
-  var dbo = db.db("sampledb");
+ // var dbo = db.db("sampledb");
 
   db.collection("rooms").find({"name": 1}).toArray(function(err, result) {
 
