@@ -14,7 +14,7 @@ var uri = "mongodb://boonbot:boonbot@cluster0-shard-00-00.esmha.mongodb.net:2701
 MongoClient.connect(uri, function(err, client) {
 
   const collection = client.db("sampledb").collection("config");
-collection.find().toArray(function(err, results) {
+collection.find().forEach(function(err, results) {
 
       console.log(results);
 
