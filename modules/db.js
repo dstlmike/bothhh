@@ -23,7 +23,7 @@ async function listCars() {
 };
 listCars().then(cars => {
 
-    console.log('Results ' + JSON.stringify(cars)); //You will get your results here
+    console.log('Results ' + cars.toString()); //You will get your results here
 
 });
 /*
