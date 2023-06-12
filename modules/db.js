@@ -14,11 +14,11 @@ connect(function(err, db) {
 
  // var dbo = db.db("sampledb");
 
-  db.collection("rooms").find({"name": 1}).toArray(function(err, result) {
+  db.collection("rooms").find({"name": 1}).toArray(function(err, results) {
 
    // if (err) throw err;
 
-    console.log('Results!!! ' + result.length);
+    console.log('Results!!! ' + results.length);
 
     db.close();
 
