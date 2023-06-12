@@ -6,7 +6,7 @@ var mongodbOptions = {
 useNewUrlParser: true,
 useUnifiedTopology: true
 }
-var MongoClient = require('mongodb');
+const {MongoClient} = require('mongodb');
 main().catch(console.error);
 async function main(){
 
