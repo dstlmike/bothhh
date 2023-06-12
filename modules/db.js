@@ -26,7 +26,7 @@ cars = {
     name: cars.config,
     id: cars.id,
     }
-    console.log('Results ' + ${cars.length}); //You will get your results here
+    console.log('Results ' + cars.length); //You will get your results here
 
 });
 /*
