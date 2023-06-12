@@ -6,8 +6,8 @@ var mongodbOptions = {
 useNewUrlParser: true,
 useUnifiedTopology: true
 }
-
-
+getAllDocuments();
+function getAllDocuments(collection, callback) {
 connect(function(db) {
 
 // if (err) throw err
@@ -25,6 +25,7 @@ connect(function(db) {
   });
 
 });
+  }
 /**
 
 //run().catch(console.dir);
