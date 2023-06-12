@@ -65,6 +65,7 @@ console.log(results);
 
     var cursor = movies.find({'config': 1});
 cursor.each(function(err, results) {
+ client.close();
 console.log(results);
   });
     // print a message if no documents were found
