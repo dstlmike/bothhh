@@ -11,6 +11,21 @@ useUnifiedTopology: true
 var MongoClient = require('mongodb').MongoClient;
 
 var uri = "mongodb://boonbot:boonbot@cluster0-shard-00-00.esmha.mongodb.net:27017,cluster0-shard-00-01.esmha.mongodb.net:27017,cluster0-shard-00-02.esmha.mongodb.net:27017/?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority";
+async function listCars() {
+
+    let db = await MongoClient.connect(url);
+
+    let dbo = db.db("sampledb");
+
+    return await dbo.collection("cars").find({}, { projection: { _id: 0, name: 1} }).toArray()
+
+}
+
+listCars().then(cars => {
+
+    console.log(cars); //You will get your results here
+
+})
 
 MongoClient.connect(uri, function(err, client) {
 /*
@@ -66,7 +81,7 @@ console.log(results);
     var cursor = movies.find({'config': 1});
 cursor.each(function(err, results) {
  //client.close();
-console.log(results[0]);
+console.log(results);
   });
     // print a message if no documents were found
 
