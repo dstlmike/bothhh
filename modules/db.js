@@ -18,7 +18,7 @@ connect(function(db, callback) {
 
    // if (err) throw err;
 
-    console.log('Results!!! ' + docs);
+    console.log('Results!!! ' + docs.length);
 
     db.close();
 
