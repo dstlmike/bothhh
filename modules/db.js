@@ -17,7 +17,7 @@ async function listCars() {
 
     let dbo = db.db("sampledb");
 
-    return await dbo.collection("cars").find({}, { projection: { _id: 0, name: 1} }).toArray()
+    return await dbo.collection("config").find({}, { projection: { _id: 0, config: 1} }).toArray()
 
 }
 
@@ -25,8 +25,8 @@ listCars().then(cars => {
 
     console.log(cars); //You will get your results here
 
-})
-
+});
+/*
 MongoClient.connect(uri, function(err, client) {
 /*
   const cursor = client.db("sampledb").collection("config").find();
@@ -52,7 +52,7 @@ var ret = [];
   client.close();
 console.log(results);
 });
-*/
+
 //  async function run() {
 //MongoClient.connect(uri, function(err, client) {
 
