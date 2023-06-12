@@ -10,11 +10,11 @@ useUnifiedTopology: true
 
 connect(function(err, db) {
 
-//  if (err) throw err;
+ if (err) throw err;
 
   var dbo = db.db("sampledb");
 
-  dbo.collection("config").find({"config": 1}).toArray(function(err, result) {
+  db.collection("config").find({"config": 1}).toArray(function(err, result) {
 
    // if (err) throw err;
 
