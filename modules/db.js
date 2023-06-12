@@ -8,11 +8,11 @@ useUnifiedTopology: true
 }
 
 
-MongoClient.connect(uri, function(err, client) {
+MongoClient.connect(uri, function(err, db) {
 
   if (err) throw err;
 
-  var dbo = client.db("sampledb");
+  var dbo = db.db("sampledb");
 
   dbo.collection("config").find({}).toArray(function(err, result) {
 
@@ -20,7 +20,7 @@ MongoClient.connect(uri, function(err, client) {
 
     console.log(result);
 
-    client.close();
+    db.close();
 
   });
 
