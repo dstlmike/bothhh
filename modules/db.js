@@ -63,10 +63,10 @@ console.log(results);
 
  //   };
 
-    var cursor = movies.find({'config': 1});
+    var cursor = movies.find({'config': 1}).toArray();
 cursor.each(function(err, results) {
- client.close();
-console.log(results);
+ //client.close();
+console.log(results[0]);
   });
     // print a message if no documents were found
 
