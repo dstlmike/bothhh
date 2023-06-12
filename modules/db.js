@@ -8,7 +8,7 @@ useUnifiedTopology: true
 }
 
 
-connect(function(err, db) {
+connect(function(db) {
 
 // if (err) throw err
 
