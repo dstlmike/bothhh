@@ -8,7 +8,7 @@ useUnifiedTopology: true
 }
 
 
-connect(function(db, callback) {
+connect(function(err, db) {
 
 // if (err) throw err
 
@@ -17,7 +17,7 @@ connect(function(db, callback) {
   db.collection("rooms").find({"name": 1}).toArray(function(err, docs) {
 
    // if (err) throw err;
-callback(docs);
+//callback(docs);
     console.log('Results!!! ' + docs.length);
 
     db.close();
