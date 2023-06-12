@@ -13,8 +13,12 @@ var uri = "mongodb://boonbot:boonbot@cluster0-shard-00-00.esmha.mongodb.net:2701
 
 MongoClient.connect(uri, function(err, client) {
 
-  const collection = client.db("test").collection("devices");
+  const collection = client.db("sampledb").collection("config");
+collection.find().toArray(function(err, results) {
 
+      console.log(results);
+
+    //  db.close();
   // perform actions on the collection object
 
   client.close();
