@@ -17,7 +17,7 @@ async function listCars() {
 
     let dbo = db.db("sampledb");
 
-    return await dbo.collection("config").find({}, { projection: { _id: 0, config: 1} }).toArray()
+    return await dbo.collection("config").find({}).toArray()
 
 }
 
