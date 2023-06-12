@@ -17,15 +17,11 @@ async function listCars() {
 
     let dbo = db.db("sampledb");
 
-    return await dbo.collection("config").find({"config": 1}).toArray();
+    return await dbo.collection("config").find().toArray();
 //results;
 //});
 };
 listCars().then(cars => {
-cars = {
-    name: cars.config,
-    id: cars.id,
-    }
     console.log('Results ${cars.length}'); //You will get your results here
 
 });
