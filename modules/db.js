@@ -12,9 +12,9 @@ connect(function(err, db) {
 
 //  if (err) throw err;
 
-  var dbo = db.db("sampledb");
+  var dbo = db.collection("config");
 
-  dbo.collection("config").find({}).toArray(function(err, result) {
+  dbo("config").find({}).toArray(function(err, result) {
 
    // if (err) throw err;
 
