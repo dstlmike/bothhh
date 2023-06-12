@@ -21,7 +21,7 @@ async function listCars() {
 //results;
 //});
 };
-listCars().then(cars => {
+listCars().then(forEach(cars) => {
 
     console.log('Results ' + cars); //You will get your results here
 
