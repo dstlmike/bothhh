@@ -8,7 +8,7 @@ useUnifiedTopology: true
 }
 getAllDocuments();
 function getAllDocuments(collection, callback) {
-connect(function(db) {
+mongoDB.connect(function(db) {
 
 // if (err) throw err
 
