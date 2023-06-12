@@ -6,10 +6,10 @@ var mongodbOptions = {
 useNewUrlParser: true,
 useUnifiedTopology: true
 }
-const {MongoClient} = require('mongodb');
+/*const {MongoClient} = require('mongodb');
 main().catch(console.error);
 async function main(){
-
+*/
     /**
 var allDocs = db.collection(collection).find().toArray(function(err, docs) {
       callback(docs);
@@ -18,6 +18,7 @@ var allDocs = db.collection(collection).find().toArray(function(err, docs) {
      * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
      * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
      */
+/*
   var uri = 'mongodb://alexbot:308boonave@cluster0-shard-00-00.esmha.mongodb.net:27017,cluster0-shard-00-01.esmha.mongodb.net:27017,cluster0-shard-00-02.esmha.mongodb.net:27017/sampledb3';
     var client = new MongoClient(uri);
     try {
@@ -37,6 +38,7 @@ async function listDatabases(client){
     console.log("Databases:");
     databasesList.databases.forEach(db => console.log(` - ${db.name}`));
 };
+*/
 //getAllDocuments();
 /*
 mongoDB.connect(connection_string, function(err, client) {
