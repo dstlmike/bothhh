@@ -12,7 +12,7 @@ var MongoClient = require('mongodb').MongoClient;
 var uri = "mongodb://boonbot:boonbot@cluster0-shard-00-00.esmha.mongodb.net:27017,cluster0-shard-00-01.esmha.mongodb.net:27017,cluster0-shard-00-02.esmha.mongodb.net:27017/?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority";
 
 MongoClient.connect(uri, function(err, client) {
-
+/*
   const cursor = client.db("sampledb").collection("config").find();
 //collection.find().each(function(err, results) {
 var ret = [];
@@ -36,7 +36,56 @@ var ret = [];
   client.close();
 console.log(results);
 });
+*/
+  async function run() {
 
+  try {
+
+    const database = client.db("sampledb");
+
+    const movies = database.collection("config");
+
+    // query for movies that have a runtime less than 15 minutes
+
+    const query = { name: 1 };
+
+    const options = {
+
+      // sort returned documents in ascending order by title (A->Z)
+
+      sort: { name: 1 },
+
+      // Include only the `title` and `imdb` fields in each returned document
+
+      projection: { _id: 0, name: 1 },
+
+    };
+
+    const cursor = movies.find(query, options);
+
+    // print a message if no documents were found
+
+    if ((await movies.countDocuments(query)) === 0) {
+
+      console.log("No documents found!");
+
+    }
+
+    for await (const doc of cursor) {
+
+      console.dir(doc);
+
+    }
+
+  } finally {
+
+    await client.close();
+
+  }
+
+}
+
+run().catch(console.dir);
 });
 
 
@@ -45,7 +94,7 @@ console.log(results);
 // Replace the uri string with your MongoDB deployment's connection string.
 
 //const uri = "<connection string uri>";
-
+/*
 const client = new MongoClient(uri);
 
 async function run() {
@@ -98,7 +147,7 @@ async function run() {
 
 run().catch(console.dir);
 
-
+*/
 
 //
 /*const {MongoClient} = require('mongodb');
