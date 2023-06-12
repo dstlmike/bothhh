@@ -61,7 +61,7 @@ console.log(results);
 
     };
 
-    const cursor = movies.find(query);
+    const cursor = movies.find();
 
     // print a message if no documents were found
 
