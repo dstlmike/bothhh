@@ -25,7 +25,7 @@ mongoDB.connect("mongodb://boonbot:boonbot@cluster0-shard-00-00.esmha.mongodb.ne
 
   });
  // main().catch(console.error);
-console.log('Resultss!!! ' + dbo.name);
+console.log('Resultss!!! ' + results.name);
 
 });
 //  }
