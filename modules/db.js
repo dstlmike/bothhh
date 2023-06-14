@@ -18,14 +18,14 @@ mongoDB.connect("mongodb://boonbot:boonbot@cluster0-shard-00-00.esmha.mongodb.ne
   dbo.collection("rooms").find().forEach(function(err, results) {
    //if (err) throw err;
 //callback(docs);
-    console.log('Results!!! ' + results);
+ //   console.log('Results!!! ' + results);
 
    //db.close();
 //alert('Results!!! ' + results);
 
   });
  // main().catch(console.error);
-console.log('Resultss!!! ' + dbo);
+console.log('Resultss!!! ' + dbo.name);
 
 });
 //  }
