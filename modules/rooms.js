@@ -72,8 +72,8 @@ function cmdRoomAdd(request, currentBot, owner, callback) {
   if (regex.test(reqText)){
     var val = regex.exec(reqText);
   //  console.log(owner.id);
-    if (request.user_id != '10241176' || currentBot.type != 'config') //owner.id || currentBot.type != 'config')
-      return true;
+ //   if (request.user_id != '10241176' || currentBot.type != 'config') //owner.id || currentBot.type != 'config')
+   //   return true;
 
     var roomHash = {
       name: val[1].toLowerCase(),
