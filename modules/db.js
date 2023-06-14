@@ -227,7 +227,7 @@ async function listDatabases(client){
     console.log("Databases:");
     databasesList.databases.forEach(db => console.log(` - ${db.name}`));
 };
-*/
+/*
 //getAllDocuments();
 /*
 mongoDB.connect(connection_string, function(err, client) {
