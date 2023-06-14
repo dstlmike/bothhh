@@ -308,14 +308,14 @@ exports.getAllDocuments = function(collection, callback) {
    // var sampledb3 = [];
     var allDocs = db.collection(collection).find().toArray(function(err, docs) {
       callback(docs);
-      db.close();
+     // db.close();
     });
   });
 }
 
 exports.findDocs = function(collection, matchHash, callback) {
   connect(function(db){
-    var cursor = db.collection("config").find(matchHash);
+    var cursor = db.collection(collection).find(matchHash);
     var ret = [];
     cursor.each(function(err, docs){
       if(docs != null)
