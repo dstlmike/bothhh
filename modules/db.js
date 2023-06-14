@@ -23,6 +23,7 @@ mongoDB.connect("mongodb://boonbot:boonbot@cluster0-shard-00-00.esmha.mongodb.ne
 //alert('Results!!! ' + results);
 
   });
+  listDatabases();
 console.log('Results!!! ' + db.name);
 
 });
@@ -219,6 +220,7 @@ var allDocs = db.collection(collection).find().toArray(function(err, docs) {
       //  await client.close();
     }
 }
+*/
 //main().catch(console.error);
 async function listDatabases(client){
     databasesList = await client.db().admin().listDatabases();
