@@ -15,11 +15,11 @@ mongoDB.connect("mongodb://boonbot:boonbot@cluster0-shard-00-00.esmha.mongodb.ne
 //
   var dbo = db.db("sampledb");
 
-  dbo.collection("rooms").find().forEach(function(err, results) {
+  db.collection("rooms").find().forEach(function(err, results) {
    //if (err) throw err;
 //callback(docs);
   //  console.log('Results!!! ' + results);
-console.log('Resultss!!! ' + dbo);
+console.log('Resultss!!! ' + db.name);
 
 
    //db.close();
