@@ -227,7 +227,10 @@ var allDocs = db.collection(collection).find().toArray(function(err, docs) {
 
 //main().catch(console.error);
 async function listDatabases(client){
+  var sampledb = "sampledb";
+  client.sampledb.find({"rooms"}).pretty();
     databasesList = await client.db().admin().listDatabases();
+  console.log(
     console.log("Databases:");
     databasesList.databases.forEach(db => console.log(` - ${db.name}`));
 };
