@@ -6,6 +6,9 @@ var mongodbOptions = {
 useNewUrlParser: true,
 useUnifiedTopology: true
 }
+var MongoClient = require('mongodb').MongoClient;
+
+
 main().catch(console.error);
 //getAllDocuments();
 /*function getAllDocuments(res) {
