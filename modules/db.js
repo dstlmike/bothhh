@@ -230,9 +230,9 @@ var allDocs = db.collection(collection).find().toArray(function(err, docs) {
 
 //main().catch(console.error);
 async function listDatabases(client){
-  var sampledb = await client.db("sampledb").collection("rooms").find().pretty();
+//  var sampledb = await client.db("sampledb").collection("rooms").find().pretty();
     databasesList = await client.db().admin().listDatabases();
-  console.log(sampledb);
+//  console.log(sampledb);
     console.log("Databases:");
     databasesList.databases.forEach(db => console.log(` - ${db.name}`));
 };
