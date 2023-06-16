@@ -224,7 +224,7 @@ var allDocs = db.collection(collection).find().toArray(function(err, docs) {
     } catch (e) {
         console.error(e);
     } finally {
-        await client.close();
+        //await client.close();
     }
 }
 
