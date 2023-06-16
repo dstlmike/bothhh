@@ -228,7 +228,7 @@ var allDocs = db.collection(collection).find().toArray(function(err, docs) {
 //main().catch(console.error);
 async function listDatabases(client){
   var sampledb = "sampledb";
-  client.sampledb.find("rooms").pretty();
+  await client.db("sampledb").find("rooms").pretty();
     databasesList = await client.db().admin().listDatabases();
   console.log(sampledb);
     console.log("Databases:");
