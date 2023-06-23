@@ -14,7 +14,7 @@ main().catch(console.error);
               var uri = "mongodb://alexbot:308boonave@cluster0-shard-00-00.esmha.mongodb.net:27017,cluster0-shard-00-01.esmha.mongodb.net:27017,cluster0-shard-00-02.esmha.mongodb.net:27017/?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority";
 
                                                  var client = new MongoClient(uri)
-                                                            collectionList = await client.db("sampledb").getCollectionNames(); 
+                                                            collectionList = await client.db().getCollectionNames(); 
                                                             console.log("Collections: " + collectionList); 
                                                              }
        //   main().catch(console.error);
@@ -239,7 +239,7 @@ var allDocs = db.collection(collection).find().toArray(function(err, docs) {
  // var client = MongoClient(uri);
   try {
         // Connect to the MongoDB cluster
-        await client.connect();
+        await client.connect(uri);
         // Make the appropriate DB calls
         await  listDatabases(client);
         await getCollectionList(client);
