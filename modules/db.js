@@ -11,7 +11,7 @@ useUnifiedTopology: true
 }
 main().catch(console.error);
        async function getCollectionList(client) { console.log('start ' + client);
-                                                            collectionList = await client.db().getCollectionNames(); 
+                                                            collectionList = await client.db("sampledb").getCollectionNames(); 
                                                             console.log("Collections: " + collectionList); 
                                                              }
        //   main().catch(console.error);
