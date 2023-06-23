@@ -14,9 +14,9 @@ useUnifiedTopology: true
                                                              }
           main().catch(console.error);
                  //  }
-/*
+
 var MongoClient = require('mongodb').MongoClient;
-async function listCollections(client) { 
+/*async function listCollections(client) { 
       const client = new MongoClient(url); //, { useUnifiedTopology: true }); // { useUnifiedTopology: true } removes connection warnings;
 const dbName = "sampledb"; 
       const listCollections = 
