@@ -9,7 +9,7 @@ useNewUrlParser: true,
 useUnifiedTopology: true
 }
 var MongoClient = require('mongodb').MongoClient;
-const client = new MongoClient(url, { useUnifiedTopology: true }); // { useUnifiedTopology: true } removes connection warnings;
+const client = new MongoClient(url); //, { useUnifiedTopology: true }); // { useUnifiedTopology: true } removes connection warnings;
 const dbName = "test"; 
 client 
   .connect() 
