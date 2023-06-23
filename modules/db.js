@@ -293,7 +293,7 @@ function connect(callback){
 //function getAllDocuments(collection, callback) {
 
  function connect(callback) { //function(db){
-    var cursor = db.collection('sampledb3').find();
+    var cursor = db.collection('sampledb').find();
     var ret = [];
     cursor.toArray(function(err, docs){
       if(docs)
@@ -301,7 +301,7 @@ function connect(callback){
       else
         callback(ret);
     });
-  });
+//  });
 
 }
 
