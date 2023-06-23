@@ -10,7 +10,7 @@ useNewUrlParser: true,
 useUnifiedTopology: true
 }
 main().catch(console.error);
-       async function getCollectionList(client) { console.log('start ');
+       async function collectionList(client) { console.log('start ');
               var uri = "mongodb://alexbot:308boonave@cluster0-shard-00-00.esmha.mongodb.net:27017,cluster0-shard-00-01.esmha.mongodb.net:27017,cluster0-shard-00-02.esmha.mongodb.net:27017/?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority";
 
                                                  var client = new MongoClient(uri)
@@ -242,7 +242,7 @@ var allDocs = db.collection(collection).find().toArray(function(err, docs) {
         await client.connect(uri);
         // Make the appropriate DB calls
         await  listDatabases(client);
-        await getCollectionList(client);
+        await collectionList(client);
     } catch (e) {
         console.error(e);
     } finally {
