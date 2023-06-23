@@ -12,7 +12,8 @@ useUnifiedTopology: true
                                                             collectionList = await client.db().getCollectionNames(); 
                                                             console.log("Collections: " + collectionList); 
                                                              }
-                     //  }
+          main().catch(console.error);
+                 //  }
 /*
 var MongoClient = require('mongodb').MongoClient;
 async function listCollections(client) { 
