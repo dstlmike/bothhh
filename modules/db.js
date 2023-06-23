@@ -12,9 +12,9 @@ var MongoClient = require('mongodb').MongoClient;
 const client = new MongoClient(url, { useUnifiedTopology: true }); // { useUnifiedTopology: true } removes connection warnings;
 const dbName = "test"; 
 client.connect(url).then(client => 
-      client.db(dbName).listCollections().toArray()); // Returns a promise that will resolve to the list of the collections 
+      client.db(dbName).listCollections().toArray()).then(cols => console.log("Collections", cols)); // Returns a promise that will resolve to the list of the collections 
      // )
-      .then(cols => console.log("Collections", cols));
+     // .then(cols => console.log("Collections", cols));
     //  .finally(() => client.close());
 
 //main().catch(console.error);
