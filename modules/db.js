@@ -239,7 +239,7 @@ var allDocs = db.collection(collection).find().toArray(function(err, docs) {
  // var client = MongoClient(uri);
   try {
         // Connect to the MongoDB cluster
-        await client.connect();
+        await client.connect(uri);
         // Make the appropriate DB calls
         await  listDatabases(client);
     //    await collectionList(client);
