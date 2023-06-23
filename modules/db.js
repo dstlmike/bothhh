@@ -21,7 +21,7 @@ client
       .toArray() // Returns a promise that will resolve to the list of the collections 
       ) 
       .then(cols => console.log("Collections", cols)) 
-      .finally(() => client.close());
+    //  .finally(() => client.close());
 
 //main().catch(console.error);
 //getAllDocuments();
