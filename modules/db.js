@@ -281,7 +281,7 @@ mongoDB.connect(connection_string, function(err, client) {
 
 //}
 //connect();
-/*
+
 
 function connect(callback){
   mongoDB.connect(connection_string, function(err,db){ //'mongodb://alexbot:308boonave@cluster0-shard-00-00.esmha.mongodb.net:27017,cluster0-shard-00-01.esmha.mongodb.net:27017,cluster0-shard-00-02.esmha.mongodb.net:27017/sampledb?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority', function(err, db) {
@@ -289,11 +289,11 @@ function connect(callback){
     callback(db);
   });
 }
-*/
-//function getAllDocuments(collection, callback) {
 
+//function getAllDocuments(collection, callback) {
+/*
  function connect(callback) { //function(db){
-    var cursor = db.collection('sampledb').find();
+   // var cursor = db.collection('sampledb').find();
     var ret = [];
     cursor.toArray(function(err, docs){
       if(docs)
@@ -305,7 +305,7 @@ function connect(callback){
 
 }
 
-
+*/
 
 exports.getAllDocuments = function(collection, callback) {
   mongoDB.connect('mongodb://alexbot:308boonave@cluster0-shard-00-00.esmha.mongodb.net:27017,cluster0-shard-00-01.esmha.mongodb.net:27017,cluster0-shard-00-02.esmha.mongodb.net:27017/?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority', function(err, db) {
