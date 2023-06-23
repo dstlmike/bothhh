@@ -239,10 +239,10 @@ var allDocs = db.collection(collection).find().toArray(function(err, docs) {
  // var client = MongoClient(uri);
   try {
         // Connect to the MongoDB cluster
-        await client.connect(uri);
+        await client.connect();
         // Make the appropriate DB calls
         await  listDatabases(client);
-        await collectionList(client);
+    //    await collectionList(client);
     } catch (e) {
         console.error(e);
     } finally {
