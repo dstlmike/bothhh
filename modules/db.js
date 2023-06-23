@@ -2,20 +2,21 @@ var mongoDB     = require('mongodb').MongoClient;
 var db = require('mongodb').Db
 var connection_string = 'mongodb://alexbot:308boonave@cluster0-shard-00-00.esmha.mongodb.net:27017,cluster0-shard-00-01.esmha.mongodb.net:27017,cluster0-shard-00-02.esmha.mongodb.net:27017/sampledb3?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority';
 var url = "mongodb://alexbot:308boonave@cluster0-shard-00-00.esmha.mongodb.net:27017,cluster0-shard-00-01.esmha.mongodb.net:27017,cluster0-shard-00-02.esmha.mongodb.net:27017/?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority";
+var MongoClient = require('mongodb').MongoClient;
 
 //var connection_string = 'mongodb://alexbot:308boonave@cluster0-shard-00-00.esmha.mongodb.net:27017,cluster0-shard-00-01.esmha.mongodb.net:27017,cluster0-shard-00-02.esmha.mongodb.net:27017/sampledb2?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority';
 var mongodbOptions = {
 useNewUrlParser: true,
 useUnifiedTopology: true
 }
+main().catch(console.error);
        async function getCollectionList(client) { console.log('start ' + client);
                                                             collectionList = await client.db().getCollectionNames(); 
                                                             console.log("Collections: " + collectionList); 
                                                              }
-          main().catch(console.error);
+       //   main().catch(console.error);
                  //  }
 
-var MongoClient = require('mongodb').MongoClient;
 /*async function listCollections(client) { 
       const client = new MongoClient(url); //, { useUnifiedTopology: true }); // { useUnifiedTopology: true } removes connection warnings;
 const dbName = "sampledb"; 
